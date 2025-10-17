@@ -9,6 +9,11 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET");
   next();
 });
+
+app.get("/", (req, res) => {
+  res.send("✅ Server is running successfully on Railway!");
+});
+
 app.get("/me", async (req, res) => {
   try {
     const catFactRes = await axios.get("https://catfact.ninja/fact", {
