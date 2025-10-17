@@ -9,6 +9,7 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Methods", "GET");
   next();
 });
+app.get("/", (req, res) => res.send("Server is running!"));
 
 app.get("/me", async (req, res) => {
   try {
@@ -50,6 +51,6 @@ app.get("/me", async (req, res) => {
   }
 });
 
-app.listen(PORT,() => {
+app.listen(PORT,"0.0.0.0",() => {
   console.log(`Server is running on port ${PORT}`);
 });
