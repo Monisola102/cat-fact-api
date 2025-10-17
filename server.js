@@ -6,11 +6,8 @@ const app = express();
 //redeploy test
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET");
   next();
-});
-
-app.get("/", (req, res) => {
-  res.send("✅ Server is running successfully on Railway!");
 });
 
 app.get("/me", async (req, res) => {
@@ -53,6 +50,6 @@ app.get("/me", async (req, res) => {
   }
 });
 
-app.listen(PORT, "0.0.0.0",() => {
+app.listen(PORT,() => {
   console.log(`Server is running on port ${PORT}`);
 });
