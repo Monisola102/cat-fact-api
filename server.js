@@ -1,9 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8080;
 const app = express();
-//Redeploy test
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET");
@@ -49,6 +48,6 @@ app.get("/me", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0",() => {
   console.log(`Server is running on port ${PORT}`);
 });
