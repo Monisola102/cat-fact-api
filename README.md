@@ -5,6 +5,8 @@ Dependencies: express, axios, dotenv
 
 Run locally: `git clone https://github.com/Monisola102/cat-fact-api.git && cd cat-fact-api && npm install && echo "PORT=4000" > .env && npm start`
 
+**Live Demo:** https://cat-fact-api-production.up.railway.app/me
+
 Example output: `{"name":"Oyewole Monisola","email":"monisola@example.com","stack":["Node.js","Express","Axios"],"cat_fact":"Cats sleep for 70% of their lives."}`
 
 GitHub repo: [https://github.com/Monisola102/cat-fact-api](https://github.com/Monisola102/cat-fact-api)  
